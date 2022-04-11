@@ -11,7 +11,17 @@
 
 **STATEMENT** makes it really easy to add reactive, state-based elements to your vanilla JS projects.
 
-Once you create a new 'Statement' object it will automatically render the template whenever any of its values chance.
+Assigning a variable to a new 'Statement' object will automatically render the associated HTML template whenever any of its values change.
+
+```javascript
+const counter = new Statement{
+    state: { value: 0 },
+    element: document.body,
+    template: counter => html`<h1>The count is ${counter.value}</h1>`
+}
+
+counter.value ++
+```
 
 ## Instatllation
 
