@@ -9,7 +9,7 @@
 
 </div>
 
-**STATEMENT** makes it ridiculously easy to add reactive state-based elements to your vanilla JS projects.
+**STATEMENT** makes it really easy to add reactive, state-based elements to your vanilla JS projects.
 
 Once you create a new 'Statement' object it will automatically render the template whenever any of its values chance.
 
