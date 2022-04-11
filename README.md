@@ -86,7 +86,17 @@ const data = new Statement(
 )
 ```
 
-Once you have created a statement, you can make any changes to the variable you assigned it to as normal and the view will update to reflect those changes:
+Creating the statement will trigger the initial render of the template inside the element using the initial values provided as `state`:
+
+```html
+<div id="data-container">
+  <h1>Statement</h1>
+</div>
+```
+
+# Statement
+
+Once you have created a statement, you can then make any changes to the variable you assigned it to as you usually would using JavaScript and the view will update to reflect those changes. For example, you could assign one of the properties to a different value:
 
 ```javascript
 data.name = "Super Statement"
