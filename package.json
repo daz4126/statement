@@ -1,0 +1,23 @@
+{
+  "name": "statement",
+  "version": "1.0",
+  "description": "super simple state management for vanilla JS",
+  "main": "statement.js",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/daz4126/statement/"
+  },
+  "dependencies": {
+    "uhtml": "^2.7.6"
+  },
+  "scripts": {
+    "test": "No tests yet"
+  },
+  "keywords": [
+    "vanillaJS",
+    "state"
+  ],
+  "author": "DAZ <daz4126@gmail.com>",
+  "license": "Unlicense"
+}
