@@ -1,6 +1,6 @@
 {
   "name": "statement",
-  "version": "0.1",
+  "version": "0.1.0",
   "description": "super simple state management for vanilla JS",
   "main": "statement.js",
   "type": "module",
