@@ -1,6 +1,6 @@
 import {html, svg, render} from 'html';
 
-function Statement({state,element=document.body,template}={}) {
+function Statement({state,element,template}={}) {
   render(element,template(state));
   const handler = {
     set(obj,key,value) {

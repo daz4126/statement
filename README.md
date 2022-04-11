@@ -39,13 +39,78 @@ If you use ES Modules, you don't need NPM. You can import from a CDN URL in your
 </script>
 ```
 
-## SET
+## Making a Statement
 
-* `state` is an object that contains your inital state.
-* `element` is the element that you want the template to be rendered inside.
-* `template` is a function that returns a string of HTML that will be rendered inside the target element.
+To create a Statement, all you need to do is assign a variable to the constructor function using the `new` keyword and provide state, element and template arguments:
+
+```
+const data = new Statement(
+    state,
+    element,
+    template
+)
+```
+
+These 3 arguments are all that's needed to 
+
+`state` is an object that contains your inital state. e.g. 
+
+```javascript
+{
+    name: "Statement",
+    version: 1.0,
+    difficulty: "easy"
+}
+```
+
+* `element` is the element that you want the template to be rendered inside. e.g.
+
+```javascript
+document.getElementById("data-container")
+```
+
+`template` is a function that returns a string of HTML that will be rendered inside the target element. It uses the `html` tag function provided by [µhtml](https://github.com/WebReflection/uhtml) that accepts a template literal as an argument and returns a string of HTML that depends on the value of the properties in `state`. The template literal contains the HTML code to be displayed inside `element` and uses `${expression}` placeholders to insert properties of `state`. e.g.
+
+```javascript
+data => html`<h1>${data.name}</h1>`
+```
+
+Putting all this together would look like the following:
+
+```javascript
+const data = new Statement(
+    state: {name: "Statement"},
+    element: document.getElementById("data-container")
+,
+    template: data => html`<h1>${data.name}</h1>`
+)
+```
+
+Once you have created a statement, you can make any changes to the variable you assigned it to as normal and the view will update to reflect those changes:
+
+```javascript
+data.name = "Super Statement"
+```
+
+This would result in the HTML inside the "data-container" element automatically updating to reflect this change:
+
+```html
+<div id="data-container">
+  <h1>Super Statement</h1>
+</div>
+```
+
+# Super Statement
+
+When creating a Statement, all you need to remember is the mneuomonic S.E.T.
+
+* state
+* element
+* template
 
 ## Simple Counter Example
+
+You can see this example [live on CodePen](https://codepen.io/daz4126/pen/yLpqJQj).
 
 index.html:
 
@@ -85,7 +150,6 @@ document.getElementById("down")
 document.getElementById("up")
   .addEventListener("click",e => counter.value++)
 ```
-
 
 ## License
 
