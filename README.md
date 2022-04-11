@@ -80,8 +80,7 @@ Putting all this together would look like the following:
 ```javascript
 const data = new Statement(
     state: {name: "Statement"},
-    element: document.getElementById("data-container")
-,
+    element: document.getElementById("data-container"),
     template: data => html`<h1>${data.name}</h1>`
 )
 ```
