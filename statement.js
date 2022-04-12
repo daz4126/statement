@@ -1,4 +1,4 @@
-import {html, svg, render} from 'html';
+import { html, svg, render } from 'uhtml';
 
 function Statement({state,element,template}={}) {
   render(element,template(state));
@@ -21,4 +21,4 @@ function Statement({state,element,template}={}) {
   return statement;
 }
 
-export {html, svg, Statement}
+export { html, svg, Statement }
