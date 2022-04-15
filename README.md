@@ -156,7 +156,7 @@ index.html:
 app.js:
 
 ```javascript
-import { Statement,html } from "statement"
+import { Statement,html } from "makeastatement"
 
 const counter = new Statement({
   state: { value: 10 },
