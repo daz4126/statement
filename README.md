@@ -11,7 +11,7 @@
 
 **STATEMENT** makes it really easy to add reactive, state-based elements to your vanilla JS projects.
 
-Assigning a variable to a new 'Statement' object will automatically render the associated HTML template whenever any of its values change.
+Assigning a variable to a new 'Statement' object will render the associated HTML template and then automatically update it whenever any of its properties change.
 
 ```javascript
 const counter = new Statement{
@@ -27,7 +27,7 @@ counter.value ++
 
 ### Using NPM CLI
 
-Install [statement](https://www.npmjs.com/package/statement) from NPM.
+Install [statement](https://www.npmjs.com/package/makeastatement) from NPM.
 
 ```bash
 npm install statement
@@ -36,7 +36,7 @@ npm install statement
 Then import like this:
 
 ```javascript
-import { Statement, html } from "statement";
+import { Statement, html } from "makeastatement";
 ```
 
 ### ES Modules
@@ -45,7 +45,7 @@ If you use ES Modules, you don't need NPM. You can import from a CDN URL in your
 
 ```html
 <script type="module">
-  import { Statement,html } from 'https://cdn.skypack.dev/statement';
+  import { Statement,html } from 'https://cdn.skypack.dev/makeastatement';
 </script>
 ```
 
